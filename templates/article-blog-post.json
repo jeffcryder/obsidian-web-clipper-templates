@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Article / Blog Post",
+  "behavior": "create",
+  "noteNameFormat": "{{title}}",
+  "path": "Clippings/Articles/",
+  "triggers": [],
+  "noteContentFormat": "## Summary\n{{\"Write a single focused paragraph summarizing the core argument or main takeaway of this article.\"}}\n\n## Key Points\n{{\"List the 5 most important ideas, insights, or arguments from this article. Be specific — capture the actual content, not vague category labels.\"}}\n\n## Notable Quotes\n{{\"Select 2–3 of the most memorable or well-phrased sentences from the article. Quote them verbatim.\"}}\n\n## Why I Saved This\n\n\n---\n\n## Full Article\n{{content}}\n\n---\n*Clipped from [{{domain}}]({{url}}) on {{date|date:\"MMMM D, YYYY\"}}*",
+  "properties": [
+    {
+      "name": "type",
+      "value": "Article",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "value": "{{title}}",
+      "type": "text"
+    },
+    {
+      "name": "author",
+      "value": "{{author}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "site",
+      "value": "{{domain}}",
+      "type": "text"
+    },
+    {
+      "name": "description",
+      "value": "{{description}}",
+      "type": "text"
+    },
+    {
+      "name": "words",
+      "value": "{{words}}",
+      "type": "number"
+    },
+    {
+      "name": "topics",
+      "value": "{{\"What are the 3–5 main topics or themes of this article? List as short labels only (e.g. productivity, machine learning, career advice).\"}}",
+      "type": "text"
+    },
+    {
+      "name": "clipped",
+      "value": "{{date}}",
+      "type": "datetime"
+    },
+    {
+      "name": "status",
+      "value": "unread",
+      "type": "text"
+    }
+  ]
+}

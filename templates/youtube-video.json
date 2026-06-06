@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "YouTube Video",
+  "behavior": "create",
+  "noteNameFormat": "{{schema:VideoObject:name}}",
+  "path": "Media/Videos/",
+  "triggers": ["https://www.youtube.com/watch"],
+  "noteContentFormat": "![Thumbnail]({{image}})\n\n**Channel:** {{schema:VideoObject:author.name}}\n**Published:** {{schema:VideoObject:uploadDate|date:\"MMMM D, YYYY\"}}\n**Duration:** {{schema:VideoObject:duration|duration}}\n\n## Description\n{{description}}\n\n## Key Points\n{{\"Based on the video title and description, list the 5 most important concepts, arguments, or insights a viewer would gain from watching this.\"}}\n\n## Action Items\n{{\"What are 2–4 concrete, specific action items or next steps worth taking after watching this video?\"}}\n\n## Related Topics to Explore\n{{\"Suggest 3–5 related topics or questions this video raises that are worth researching further.\"}}\n\n## My Notes\n\n\n---\n🎬 [Watch on YouTube]({{url}})",
+  "properties": [
+    {
+      "name": "type",
+      "value": "Video",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "value": "{{schema:VideoObject:name}}",
+      "type": "text"
+    },
+    {
+      "name": "channel",
+      "value": "{{schema:VideoObject:author.name}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{schema:VideoObject:uploadDate}}",
+      "type": "date"
+    },
+    {
+      "name": "duration",
+      "value": "{{schema:VideoObject:duration|duration}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "watched",
+      "value": "false",
+      "type": "checkbox"
+    },
+    {
+      "name": "clipped",
+      "value": "{{date}}",
+      "type": "datetime"
+    }
+  ]
+}

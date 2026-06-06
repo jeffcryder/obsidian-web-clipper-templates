@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "arXiv Paper",
+  "behavior": "create",
+  "noteNameFormat": "{{meta:citation_arxiv_id}} – {{meta:citation_title}}",
+  "path": "Research/Papers/",
+  "triggers": ["arxiv.org/abs"],
+  "noteContentFormat": "## Abstract\n{{meta:citation_abstract}}\n\n## Key Contributions\n{{\"Identify and list the 3–5 most important contributions or findings from this abstract. Be specific and concise.\"}}\n\n## Limitations & Open Questions\n{{\"Based on the abstract, what are the key limitations, assumptions, or open questions this work leaves unresolved?\"}}\n\n## My Notes\n\n\n---\n📄 [PDF]({{meta:citation_pdf_url}}) · [arXiv:{{meta:citation_arxiv_id}}]({{url}})",
+  "properties": [
+    {
+      "name": "type",
+      "value": "Paper",
+      "type": "text"
+    },
+    {
+      "name": "title",
+      "value": "{{meta:citation_title}}",
+      "type": "text"
+    },
+    {
+      "name": "arxiv_id",
+      "value": "{{meta:citation_arxiv_id}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{meta:citation_date}}",
+      "type": "text"
+    },
+    {
+      "name": "pdf",
+      "value": "{{meta:citation_pdf_url}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "value": "unread",
+      "type": "text"
+    }
+  ]
+}

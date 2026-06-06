@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "Apple Podcasts Episode",
+  "behavior": "create",
+  "noteNameFormat": "{{schema:PodcastEpisode:name}}",
+  "path": "Media/Podcasts/",
+  "triggers": ["podcasts.apple.com"],
+  "noteContentFormat": "![Artwork]({{image}})\n\n**Show:** {{schema:PodcastEpisode:partOfSeries.name}}\n**Guest(s):** {{\"Who are the guests in this episode? List their names and roles based on the title and description. If no guests, say 'Solo'.\"}}\n**Published:** {{published}}\n**Duration:** {{schema:PodcastEpisode:duration|duration}}\n\n## Description\n{{description}}\n\n## Chapters\n{{\"If there are timestamps or chapter markers in the description or page content, extract and format them as a markdown list. Use format: (HH:MM:SS) Chapter Title. If no chapters found, write 'No chapters available'.\"}}\n\n## Key Takeaways\n{{\"List the 5 most important insights, arguments, or ideas from this episode based on the title, description, and any available transcript content.\"}}\n\n## Transcript\n> ⚠️ Open the transcript panel in Apple Podcasts before clipping for this section to populate.\n\n{{content}}\n\n---\n🎙️ [Listen on Apple Podcasts]({{url}})",
+  "properties": [
+    {
+      "name": "type",
+      "value": "Podcast Episode",
+      "type": "text"
+    },
+    {
+      "name": "episode",
+      "value": "{{schema:PodcastEpisode:name}}",
+      "type": "text"
+    },
+    {
+      "name": "show",
+      "value": "{{schema:PodcastEpisode:partOfSeries.name}}",
+      "type": "text"
+    },
+    {
+      "name": "guest",
+      "value": "{{\"Who are the guest(s) in this episode? Names only, comma-separated. Reply 'Solo' if none.\"}}",
+      "type": "text"
+    },
+    {
+      "name": "published",
+      "value": "{{published}}",
+      "type": "text"
+    },
+    {
+      "name": "duration",
+      "value": "{{schema:PodcastEpisode:duration|duration}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "listened",
+      "value": "false",
+      "type": "checkbox"
+    },
+    {
+      "name": "clipped",
+      "value": "{{date}}",
+      "type": "datetime"
+    }
+  ]
+}

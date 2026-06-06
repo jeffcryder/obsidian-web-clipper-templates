@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "0.1.0",
+  "name": "GitHub Repository",
+  "behavior": "create",
+  "noteNameFormat": "{{meta:og:title|replace:\"GitHub - \",\"\"}}",
+  "path": "Dev/Repos/",
+  "triggers": ["^https://github\\.com/[^/]+/[^/#?]+$"],
+  "noteContentFormat": "## Summary\n{{\"Write a 2–3 sentence description of what this repository does, who it's for, and why it's useful. Base it on the README and page content.\"}}\n\n## Key Features\n{{\"List the 4–6 most important features or capabilities of this project based on the README.\"}}\n\n## Getting Started\n{{\"Summarize the installation and quickstart steps from the README in a clear, concise way.\"}}\n\n## Notes\n\n\n---\n🔗 [{{meta:og:title|replace:\"GitHub - \",\"\"}}]({{url}})",
+  "properties": [
+    {
+      "name": "type",
+      "value": "Repository",
+      "type": "text"
+    },
+    {
+      "name": "repo",
+      "value": "{{meta:og:title|replace:\"GitHub - \",\"\"}}",
+      "type": "text"
+    },
+    {
+      "name": "source",
+      "value": "{{url}}",
+      "type": "text"
+    },
+    {
+      "name": "clipped",
+      "value": "{{date}}",
+      "type": "datetime"
+    },
+    {
+      "name": "language",
+      "value": "{{\"What is the primary programming language of this repository? Reply with just the language name.\"}}",
+      "type": "text"
+    },
+    {
+      "name": "status",
+      "value": "bookmarked",
+      "type": "text"
+    }
+  ]
+}
