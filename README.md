@@ -1,1 +1,1 @@
-# obsidian-web-clipper-templates
+# Obsidian Web Clipper Templates
